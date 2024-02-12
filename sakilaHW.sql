@@ -13,3 +13,5 @@ select category.name, count(rental.rental_id) from rental join inventory on rent
 select category.name, AVG(film.rental_rate) from film join film_category on film.film_id = film_category.film_id join category on film_category.category_id = category.category_id group by category.name;
 
 select film.title, max(rental.rental_date) from film left join inventory on film.film_id = inventory.film_id left join rental on inventory.inventory_id = rental.inventory_id where rental.rental_date < DATE_SUB(NOW(), INTERVAL 1 MONTH) group by film.title;
+
+select customer.first_name, customer.last_name, SUM(payment.amount) from customer join payment on customer.customer_id = payment.customer_id group by customer.customer_id;
