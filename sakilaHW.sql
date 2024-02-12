@@ -9,3 +9,5 @@ select customer.first_name, customer.last_name, count(rental.rental_id) from cus
 select customer.store_id, count(rental.rental_id) from customer join rental on customer.customer_id = rental.customer_id group by customer.store_id order by count(rental.rental_id) desc limit 1;
 
 select category.name, count(rental.rental_id) from rental join inventory on rental.inventory_id = inventory.inventory_id join film_category on inventory.film_id = film_category.film_id join category on film_category.category_id = category.category_id group by category.name order by count(rental.rental_id) desc limit 1;
+
+select category.name, AVG(film.rental_rate) from film join film_category on film.film_id = film_category.film_id join category on film_category.category_id = category.category_id group by category.name;
