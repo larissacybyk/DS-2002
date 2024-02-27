@@ -1,0 +1,14 @@
+{
+    "countries": [
+        {
+            "country": "Ireland",
+            "capital": "London",
+            "population": 67215293
+        },
+        {
+            "country": "Denmark",
+            "capital": "Copenhagen",
+            "population": 5831404
+        }
+    ]
+}
