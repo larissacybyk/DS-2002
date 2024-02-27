@@ -12,7 +12,9 @@ json_data = response.json()
 if response.status_code >= 400: 
     print("Invalid input, please try again.")
     exit()
-
+if response.status_code != 200:
+    print("Please try again")
+    exit()
 cap = json_data[0]["capital"][0]
 pop = json_data[0]["population"]
 print("Capital: " + cap)
