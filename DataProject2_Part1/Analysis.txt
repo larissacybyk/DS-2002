@@ -1,1 +1,2 @@
-Analysis & Picture:
+Analysis:
+At the start of each hour (based on the current time rather than the hour that the program is running), the factor increases using a cubic pattern. It begins with 1 at the 0th minute of the hour, 1 at the 1st minute, 8 (2 cubed) at the 2nd minute, etc. This pattern then resets at the beginning of the next hour. Additionally, as the factor and time increases, the 'pi' number gets closer and closer to the actual value. This could be because the factor is used to calculate pi in a way such that a larger factor produces a more accurate estimation.
